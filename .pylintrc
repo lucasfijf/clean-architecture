@@ -2,7 +2,8 @@
 
 disable=
       C0114, # missing-module-docstring
-      E0015 # unrecognized-option
+      E0015, # unrecognized-option
+      E0611  # no-name-in-module
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists
@@ -331,7 +332,7 @@ indent-after-paren=4
 indent-string='    '
 
 # Maximum number of characters on a single line.
-max-line-length=100
+max-line-length=120
 
 # Maximum number of lines in a module.
 max-module-lines=1000
