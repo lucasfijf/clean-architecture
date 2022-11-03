@@ -1,12 +1,13 @@
 # pylint: disable=E1102
 
 from typing import List
+from src.data.interfaces import UserRepositoryInterface
 from src.domain.models import Users
 from src.infra.config import DBConnectionHandler
 from src.infra.entities import Users as UsersModel
 
 
-class UserRepository:
+class UserRepository(UserRepositoryInterface):
     """User repository management"""
 
     @classmethod
