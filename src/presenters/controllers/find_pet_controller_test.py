@@ -18,7 +18,7 @@ def test_handle():
         "user_id": faker.random_number(digits=2),
     }
     http_request = HttpRequest(query=attributes)
-    http_response = find_pet_router.route(http_request)
+    http_response = find_pet_router.handle(http_request)
 
     assert (
         find_pet_use_case.by_pet_id_and_user_id_param["pet_id"] == attributes["pet_id"]

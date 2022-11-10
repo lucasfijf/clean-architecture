@@ -1,10 +1,11 @@
 from typing import Type
+from src.main.interfaces import RouteInterface
 from src.domain.use_cases import FindUser
 from src.presenters.helpers import HttpRequest, HttpResponse
 from src.presenters.errors import HttpErrors
 
 
-class FindUserController:
+class FindUserController(RouteInterface):
     """Controller definition to find_user use case"""
 
     def __init__(self, find_user_use_case: Type[FindUser]):

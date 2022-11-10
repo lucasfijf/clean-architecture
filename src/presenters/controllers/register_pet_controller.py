@@ -1,10 +1,11 @@
 from typing import Type
+from src.main.interfaces import RouteInterface
 from src.domain.use_cases import RegisterPet
 from src.presenters.helpers import HttpRequest, HttpResponse
 from src.presenters.errors import HttpErrors
 
 
-class RegisterPetController:
+class RegisterPetController(RouteInterface):
     """Controller definition to register_pet use case"""
 
     def __init__(self, register_pet_use_case: Type[RegisterPet]):
