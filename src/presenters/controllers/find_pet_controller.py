@@ -21,14 +21,14 @@ class FindPetController(RouteInterface):
             if "pet_id" in query_string_params and "user_id" in query_string_params:
                 pet_id = http_request.query["pet_id"]
                 user_id = http_request.query["user_id"]
-                response = self.find_pet_use_case.by_pet_id_and_user_id(
+                response = self.find_pet_use_case.by_id_and_user_id(
                     pet_id=pet_id, user_id=user_id
                 )
             elif (
                 "pet_id" in query_string_params and "user_id" not in query_string_params
             ):
                 pet_id = http_request.query["pet_id"]
-                response = self.find_pet_use_case.by_pet_id(pet_id=pet_id)
+                response = self.find_pet_use_case.by_id(pet_id=pet_id)
             elif (
                 "user_id" in query_string_params and "pet_id" not in query_string_params
             ):

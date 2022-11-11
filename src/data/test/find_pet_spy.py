@@ -36,9 +36,7 @@ class FindPetSpy:
 
         return {"Success": validate_entry, "Data": response}
 
-    def by_pet_id_and_user_id(
-        self, pet_id: int, user_id: int
-    ) -> Dict[bool, List[Pets]]:
+    def by_id_and_user_id(self, pet_id: int, user_id: int) -> Dict[bool, List[Pets]]:
         """Select Pet By user_id"""
 
         self.by_pet_id_and_user_id_param["pet_id"] = pet_id
